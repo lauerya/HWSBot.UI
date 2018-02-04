@@ -6,3 +6,8 @@ interface NodeModule {
 declare const apis: {
   hwsApi: string;
 };
+interface Item {
+  name: string;
+  price: number
+  date: string;
+}

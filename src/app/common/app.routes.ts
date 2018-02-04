@@ -1,5 +1,5 @@
-import {Routes} from "@angular/router";
-import {SearchComponent} from "../search.component";
+import {RouterModule, Routes} from "@angular/router";
+import {SearchComponent} from "../areas/search/search.component";
 /**
  * Created by ryanlauer on 6/8/17.
  */

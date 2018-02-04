@@ -63,6 +63,10 @@ body {
   margin-bottom: 10px;
 }
 
+.card {
+  margin-top: 50px;
+}
+
 .masthead-nav > li {
   display: inline-block;
 }
