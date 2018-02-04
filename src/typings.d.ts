@@ -11,4 +11,5 @@ interface Item {
   Price: number;
   Item: string;
   Date: string;
+  Url: string;
 }
