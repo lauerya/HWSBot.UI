@@ -10,12 +10,14 @@ import {HttpClientModule} from "@angular/common/http";
 import {ROUTES} from "./common/app.routes";
 import {HttpClient} from "./common/http-client";
 import { ResultComponent } from './areas/result/result.component';
+import {ResultItemComponent} from "./areas/result/result-item/result-item.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ResultComponent
+    ResultComponent,
+    ResultItemComponent
   ],
   imports: [
     BrowserModule,

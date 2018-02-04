@@ -15,11 +15,12 @@ export class SearchComponent {
   constructor(private route: ActivatedRoute, private hwsbotService: HwsBotService) {}
 
   search(searchString: string) {
+    this.showResults = false;
     this.route.params
       .switchMap((params: Params) => this.hwsbotService.getItemQuote(searchString))
       .subscribe(itemList => {
-        this.showResults = true;
         this.itemList = itemList;
+        this.showResults = true;
       })
 
 

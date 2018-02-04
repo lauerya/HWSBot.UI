@@ -1,5 +1,17 @@
-<div>
-  <div *ngFor="let item of itemList">
-    {{item.name}}, {{item.price}}, {{item.date}}
-  </div>
-</div>
+<table class="table">
+  <tr>
+    <th>Author</th>
+    <th>Items</th>
+    <th>Price</th>
+    <th>Date</th>
+  </tr>
+  <tr *ngFor="let item of itemList">
+    <td>{{item.Author}}</td>
+    <td>{{item.Item}}</td>
+    <td>{{item.Price}}</td>
+    <td>{{item.Date}}</td>
+  </tr>
+</table>
+<ul>
+
+</ul>

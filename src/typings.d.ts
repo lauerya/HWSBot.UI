@@ -7,7 +7,8 @@ declare const apis: {
   hwsApi: string;
 };
 interface Item {
-  name: string;
-  price: number
-  date: string;
+  Author: string;
+  Price: number;
+  Item: string;
+  Date: string;
 }
