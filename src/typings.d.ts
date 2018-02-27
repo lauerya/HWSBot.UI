@@ -12,4 +12,5 @@ interface Item {
   Item: string;
   Date: string;
   Url: string;
+  Text: string;
 }

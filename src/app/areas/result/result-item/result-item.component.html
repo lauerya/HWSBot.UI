@@ -1,7 +1,32 @@
-<tr *ngFor="let item of itemList">
-  <td>{{item.Author}}</td>
-  <td>{{item.Item}}</td>
-  <td>{{item.Price}}</td>
-  <td>{{item.Date}}</td>
-  <td>{{item.Url}}</td>
-</tr>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{item.Author}}</mat-card-title>
+    <mat-card-subtitle class="pull-right">{{item.Date}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="linkList" class="carousel">
+      <ul class="slides">
+        <li *ngFor="let link of linkList">
+          <img src="{{link}}">
+        </li>
+      </ul>
+
+    </div>
+
+    <div *ngIf="hasText">
+    <div class="text" [innerHTML]="postText"></div>
+    </div>
+    <p *ngIf="!hasText">
+      <span class="title">Items:</span> {{item.Item}} <br/>
+      <span class="title">Prices:</span> {{item.Price}} <br/>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button type="button" class="btn btn-primary" (click)="openLink(item.Url)">Go To Post</button>
+    <button type="button" class="btn btn-primary" (click)="messageUser(item.Author)">Message User</button>
+  </mat-card-actions>
+</mat-card>
+
+<div>
+  <a class="md" href="https://i.imgur.com/yf4ibon.jpg"></a>
+</div>

@@ -11,18 +11,31 @@ import {ROUTES} from "./common/app.routes";
 import {HttpClient} from "./common/http-client";
 import { ResultComponent } from './areas/result/result.component';
 import {ResultItemComponent} from "./areas/result/result-item/result-item.component";
+import {SortPipe} from "./areas/result/sort.pipe";
+import { ResultModalComponent } from 'app/areas/result/result-modal/result-modal.component';
+import { ModalComponent } from './common/modal/modal.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     ResultComponent,
-    ResultItemComponent
+    ResultItemComponent,
+    ResultModalComponent,
+    SortPipe,
+    ModalComponent
+
   ],
   imports: [
     BrowserModule,
     HttpModule,
 HttpClientModule,
+    MatCardModule,
+    MatDividerModule,
   RouterModule.forRoot(ROUTES, {useHash: false}),
 ],
   providers: [ HwsBotService, RouterModule, HttpClient],

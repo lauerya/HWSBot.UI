@@ -1,8 +1,8 @@
 import { browser, by, element } from 'protractor';
 
-export class HardwareSwap.UIPage {
+export class HardwareSwapUIPage {
   navigateTo() {
-    return browser.get('/');
+    return browser.get('google.com');
   }
 
   getParagraphText() {
