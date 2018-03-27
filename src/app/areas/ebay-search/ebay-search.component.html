@@ -1,13 +1,11 @@
 <div class="card">
-  <h1 class="cover-heading">Search /r/HardwareSwap Database</h1>
-  <div>
+  <h1 class="cover-heading">Search Sold Ebay Postings</h1>
     <input class="search-bar" type="text" #box>
     <p>{{value}}</p>
     <button class="btn btn-lg btn-default" (click)="search(box.value)">Search</button>
   </div>  <p class="lead">
-  </p>
-<div>
-  <result *ngIf="showResults" [itemList]="itemList"></result>
-</div>
+</p>
+  <div>
+    <result *ngIf="showResults" [itemList]="itemList"></result>
+  </div>
 
-</div>

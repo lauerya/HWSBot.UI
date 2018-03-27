@@ -14,10 +14,9 @@ import {ResultItemComponent} from "./areas/result/result-item/result-item.compon
 import {SortPipe} from "./areas/result/sort.pipe";
 import { ResultModalComponent } from 'app/areas/result/result-modal/result-modal.component';
 import { ModalComponent } from './common/modal/modal.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatDividerModule} from '@angular/material/divider';
-
-
+import { CardComponent } from './common/card/card.component';
+import { EbaySearchComponent } from './areas/ebay-search/ebay-search.component';
+import {AppShellComponent} from "./app-shell";
 
 @NgModule({
   declarations: [
@@ -27,15 +26,16 @@ import {MatDividerModule} from '@angular/material/divider';
     ResultItemComponent,
     ResultModalComponent,
     SortPipe,
-    ModalComponent
+    ModalComponent,
+    CardComponent,
+    AppShellComponent,
+    EbaySearchComponent
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
 HttpClientModule,
-    MatCardModule,
-    MatDividerModule,
   RouterModule.forRoot(ROUTES, {useHash: false}),
 ],
   providers: [ HwsBotService, RouterModule, HttpClient],

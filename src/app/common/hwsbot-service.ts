@@ -5,9 +5,15 @@ import {Injectable} from "@angular/core";
  export class HwsBotService {
   constructor(private httpClient: HttpClient) {}
 
-  getItemQuote(item: String) {
+  getItemQuote(item: string) {
     return this.httpClient
       .post(`http://localhost/api/Hws/V1/Reddit/ItemDetail/`, {item})
+      .map(this.httpClient.extractData)
+      .catch(this.httpClient.handleError);
+  }
+  getEbayItems(item: string) {
+    return this.httpClient
+      .post(`http://localhost/api/Hws/V1/Ebay/CompletedItems/`, {item})
       .map(this.httpClient.extractData)
       .catch(this.httpClient.handleError);
   }

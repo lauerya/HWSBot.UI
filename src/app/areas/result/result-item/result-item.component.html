@@ -1,15 +1,15 @@
-<mat-card class="card">
-  <mat-card-header>
-    <mat-card-title>{{item.Author}}</mat-card-title>
-    <mat-card-subtitle class="pull-right">{{item.Date}}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
+<app-card>
+  <div card-header>
+    <span>{{item.Author}}</span>
+    <div class="pull-right">{{item.Date}}</div>
+  </div>
+  <div card-body>
     <div *ngIf="linkList" class="carousel">
-      <ul class="slides">
-        <li *ngFor="let link of linkList">
-          <img src="{{link}}">
-        </li>
-      </ul>
+      <!--<ul class="slides">-->
+        <!--<li *ngFor="let link of linkList">-->
+          <!--<img src="{{link}}">-->
+        <!--</li>-->
+      <!--</ul>-->
 
     </div>
 
@@ -20,13 +20,12 @@
       <span class="title">Items:</span> {{item.Item}} <br/>
       <span class="title">Prices:</span> {{item.Price}} <br/>
     </p>
-  </mat-card-content>
-  <mat-card-actions>
+  </div>
+  <div card-footer>
     <button type="button" class="btn btn-primary" (click)="openLink(item.Url)">Go To Post</button>
     <button type="button" class="btn btn-primary" (click)="messageUser(item.Author)">Message User</button>
-  </mat-card-actions>
-</mat-card>
-
+  </div>
+</app-card>
 <div>
   <a class="md" href="https://i.imgur.com/yf4ibon.jpg"></a>
 </div>

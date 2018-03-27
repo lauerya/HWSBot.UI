@@ -1,9 +1,5 @@
-  <div *ngFor="let item of itemList | sort">
-    <result-item [item]="item"></result-item>
-    <!--<td><button type="button" class="btn btn-link" (click)="openUser(item.Author)">{{item.Author}}</button> </td>-->
-    <!--<td>{{item.Item}}</td>-->
-    <!--<td>{{item.Price}}</td>-->
-    <!--<td>{{item.Date}}</td>-->
-    <!--<td><button type="button" class="btn btn-primary" (click)="openLink(item.Url)">Link To Post</button></td>-->
-  </div>
-
+ <div class="cover-container">
+   <div *ngFor="let item of itemList | sort">
+     <result-item [item]="item"></result-item>
+   </div>
+ </div>
