@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { SearchComponent } from './areas/search/search.component'
 import { RouterModule} from "@angular/router";
 import {HttpModule} from "@angular/http";
@@ -17,10 +16,11 @@ import { ModalComponent } from './common/modal/modal.component';
 import { CardComponent } from './common/card/card.component';
 import { EbaySearchComponent } from './areas/ebay-search/ebay-search.component';
 import {AppShellComponent} from "./app-shell";
+import { EbayResultComponent } from './areas/ebay-search/ebay-result/ebay-result.component';
+import { EbayResultItemComponent } from './areas/ebay-search/ebay-result-item/ebay-result-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     SearchComponent,
     ResultComponent,
     ResultItemComponent,
@@ -29,16 +29,18 @@ import {AppShellComponent} from "./app-shell";
     ModalComponent,
     CardComponent,
     AppShellComponent,
-    EbaySearchComponent
+    EbaySearchComponent,
+    EbayResultComponent,
+    EbayResultItemComponent
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
 HttpClientModule,
-  RouterModule.forRoot(ROUTES, {useHash: false}),
+  RouterModule.forRoot(ROUTES),
 ],
   providers: [ HwsBotService, RouterModule, HttpClient],
-  bootstrap: [AppComponent, SearchComponent]
+  bootstrap: [AppShellComponent]
 })
 export class AppModule { }

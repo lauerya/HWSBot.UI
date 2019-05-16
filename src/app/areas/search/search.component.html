@@ -1,13 +1,22 @@
-<div class="card">
-  <h1 class="cover-heading">Search /r/HardwareSwap Database</h1>
-  <div>
-    <input class="search-bar" type="text" #box>
-    <p>{{value}}</p>
-    <button class="btn btn-lg btn-default" (click)="search(box.value)">Search</button>
-  </div>  <p class="lead">
-  </p>
-<div>
-  <result *ngIf="showResults" [itemList]="itemList"></result>
-</div>
+      <!----------->
+      <div class="card">
+        <h1 class="cover-heading">Search /r/HardwareSwap Database</h1>
+        <div>
+          <input class="search-bar" type="text" #box>
+          <p>{{value}}</p>
+          <button class="btn btn-lg btn-default" (click)="search(box.value)">Search</button>
+        </div>
+        <p class="lead">
+        </p>
+        <div>
+          <result *ngIf="showResults" [itemList]="itemList"></result>
+        </div>
 
-</div>
+      </div>
+      <!----------->
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p><a href="https://github.com/lauerya">Ryan's Github</a></p>
+        </div>
+      </div>

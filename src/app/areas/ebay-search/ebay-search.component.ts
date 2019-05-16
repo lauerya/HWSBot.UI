@@ -3,14 +3,14 @@ import {ActivatedRoute, Params} from "@angular/router";
 import {HwsBotService} from "../../common/hwsbot-service";
 
 @Component({
-  selector: 'app-ebay-search',
+  selector: 'ebay-search',
   templateUrl: './ebay-search.component.html',
-  styleUrls: ['./ebay-search.component.css']
+  styleUrls: ['./ebay-search.component.scss']
 })
 export class EbaySearchComponent {
   title = 'search';
   value= ' ';
-  itemList: Item[];
+  itemList: EbayItem[];
   showResults: boolean;
 
   constructor(private route: ActivatedRoute, private hwsbotService: HwsBotService) {}
@@ -20,7 +20,7 @@ export class EbaySearchComponent {
     this.route.params
       .switchMap((params: Params) => this.hwsbotService.getEbayItems(searchString))
       .subscribe(itemList => {
-        this.itemList = itemList;
+        this.itemList = itemList.item;
         this.showResults = true;
       })
 

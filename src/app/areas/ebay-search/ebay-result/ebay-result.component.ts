@@ -1,25 +1,28 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {SortPipe} from "./sort.pipe";
 
 @Component({
-  selector: 'result',
-  templateUrl: './result.component.html',
-  styleUrls: ['./result.component.scss'],
+  selector: 'ebay-result',
+  templateUrl: './ebay-result.component.html',
+  styleUrls: ['./ebay-result.component.css']
 })
-export class ResultComponent implements OnInit {
+export class EbayResultComponent implements OnInit {
 
   @Input() itemList: Item[];
   modalOpen = false;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
     console.log(this.itemList);
   }
+
   openLink(link: string) {
     window.open(link, '_blank');
     this.modalOpen = !this.modalOpen;
   }
-  openUser(user: string){
+
+  openUser(user: string) {
     window.open(`https://www.reddit.com/user/${user}`, '_blank')
   }
 }

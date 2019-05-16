@@ -1,0 +1,32 @@
+<app-card>
+  <div card-header>
+    <span>{{item.Author}}</span>
+    <div class="pull-right">{{item.Date}}</div>
+  </div>
+  <div card-body>
+    <div *ngIf="linkList" class="carousel">
+      <!--<ul class="slides">-->
+      <!--<li *ngFor="let link of linkList">-->
+      <!--<img src="{{link}}">-->
+      <!--</li>-->
+      <!--</ul>-->
+
+    </div>
+
+    <div *ngIf="hasText">
+      <div class="text" [innerHTML]="postText"></div>
+    </div>
+    <p *ngIf="!hasText">
+      <span class="title">Item:</span> {{item.title}} <br/>
+      <span class="title">Price:</span> {{item.sellingStatus}} <br/>
+      <span class="title">Images:</span> {{item.sellingStatus}} <br/>
+    </p>
+  </div>
+  <div card-footer>
+    <button type="button" class="btn btn-primary" (click)="openLink(item.Url)">Make A Bid</button>
+    <button type="button" class="btn btn-primary" (click)="messageUser(item.Author)">Message User</button>
+  </div>
+</app-card>
+<div>
+  <a class="md" href="https://i.imgur.com/yf4ibon.jpg"></a>
+</div>

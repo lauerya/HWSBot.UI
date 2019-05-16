@@ -14,3 +14,20 @@ interface Item {
   Url: string;
   Text: string;
 }
+
+interface EbayItem {
+  title: string[];
+  galleryURL: string[];
+  postalCode: string[];
+  sellingStatus: SellingStatus;
+
+}
+
+interface SellingStatus {
+  currentPrice: CurrentPrice[];
+}
+
+interface CurrentPrice {
+  currencyId: string;
+  __value__: string;
+}
