@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import { ActivatedRoute, Params } from '@angular/router';
-import { HwsBotService } from '../../common/hwsbot-service'
+import { HwsBotService } from '../../common/services/hwsbot-service'
 @Component({
   selector: 'search-component',
   templateUrl: 'search.component.html',

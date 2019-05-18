@@ -6,25 +6,13 @@ import 'rxjs/add/operator/filter';
   selector: 'app-shell',
   encapsulation: ViewEncapsulation.None,
   template: `
-    <div class="site-wrapper">
-      <div class="cover-container">
-        <div class="masthead clearfix">
-          <div class="inner">
-            <h3 class="masthead-brand">HWSBot.UI</h3>
-            <nav>
-              <ul class="nav masthead-nav">
-                <li class="active"><a routerLink="reddit" routerLinkActive="active">Reddit Search</a></li>
-                <li><a routerLink="ebay" routerLinkActive="active">Ebay Search</a></li>
-                <li><a href="https://www.reddit.com/user/rachelsroomate/">Reddit User</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-    <router-outlet></router-outlet>
-        </div>
-      </div>
-    </div>
-  `
+  <template ngbModalContainer></template>
+  <hws-navbar></hws-navbar>
+  <div class="container view-container contain">
+  <router-outlet></router-outlet>
+</div>
+  `,
+  styles:[`.main-display { display: contents; } .contain {margin-top:60px;}` ]
 })
 export class AppShellComponent implements OnInit {
   constructor (private router: Router) {}

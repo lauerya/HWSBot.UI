@@ -1,0 +1,23 @@
+<form>
+ <div class="form-group">
+   <label for="name">Product Name: </label>
+    <input type="text" id="name" required> 
+</div>
+<div class="form-group">
+     </div>
+     <div *ngFor="let criteria of getCriteriaList(); let thisIndex = index;">
+         <div class="row col-sm-12" [formGroupName]="thisIndex">
+             <div>
+                <label class="col-sm-2" for="criteria">Criteria: </label>
+                <input class="col-sm-4" type="text" id="criteria" required> 
+             </div>
+             <div>
+                <label class="col-sm-2" for="rank">Rank: </label>
+                <input class="col-sm-4" type="number" id="rank" required> 
+             </div>            
+         </div>
+     </div>
+     <button class="btn btn-primary" type="button" (click)="addCriteria()">Add More Criteria</button>
+
+<button type="submit" class="btn btn-primary" (click)="saveProduct()">Save</button>
+</form>

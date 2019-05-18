@@ -1,17 +1,19 @@
       <!----------->
       <div class="card">
-        <h1 class="cover-heading">Search /r/HardwareSwap Database</h1>
+        <h1 class="cover-heading">Recent Product Searches</h1>
         <div>
+          <product *ngFor="let product of products$ | async"
+          [product]="product">
+          </product>
           <input class="search-bar" type="text" #box>
           <p>{{value}}</p>
           <button class="btn btn-lg btn-default" (click)="search(box.value)">Search</button>
         </div>
         <p class="lead">
         </p>
-        <div>
-          <result *ngIf="showResults" [itemList]="itemList"></result>
-        </div>
-
+        <!--<div>-->
+          <!--<result *ngIf="showResults" [itemList]="itemList"></result>-->
+        <!--</div>-->
       </div>
       <!----------->
 

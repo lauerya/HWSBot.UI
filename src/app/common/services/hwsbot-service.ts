@@ -1,4 +1,4 @@
-import {HttpClient} from "./http-client";
+import {HttpClient} from "../http-client";
 import {Injectable} from "@angular/core";
 
 @Injectable()
@@ -17,4 +17,9 @@ import {Injectable} from "@angular/core";
       .map(this.httpClient.extractData)
       .catch(this.httpClient.handleError);
   }
+  getRecentProducts() {
+    return this.httpClient
+    .get(`http://localhost/api/Hws/V1/Product/1`)
+    .map(this.httpClient.extractData)
+    .catch(this.httpClient.handleError);  }
 }

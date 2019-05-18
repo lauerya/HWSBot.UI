@@ -1,12 +1,12 @@
 import {Routes} from "@angular/router";
 import {SearchComponent} from "../areas/search/search.component";
 import {EbaySearchComponent} from "../areas/ebay-search/ebay-search.component";
-import {AppShellComponent} from "../app-shell";
+import {HomeComponent} from '../areas/home/home.component';
 
 export const ROUTES: Routes = [
   {
     path: '',
-    component: SearchComponent,
+    component: HomeComponent,
     children: [
       {
         path: 'reddit',
@@ -18,7 +18,7 @@ export const ROUTES: Routes = [
       },
       {
         path: '**',
-  redirectTo: 'reddit '
+  redirectTo: ''
 }
 ]
 }
